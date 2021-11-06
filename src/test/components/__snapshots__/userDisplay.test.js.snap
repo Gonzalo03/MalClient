@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente userDisplay Debe hacer match con el snapshot 1`] = `
+<Fragment>
+  <div
+    className="md:grid grid-cols-2 my-5 userDisplay"
+  >
+    <div
+      className="max-w-sm flex flex-col items-center justify-center rounded shadow-lg mx-auto"
+    >
+      <img
+        alt="MauroDT"
+        src="https://cdn.myanimelist.net/images/userimages/6484810.jpg?t=1633289400"
+        style={
+          Object {
+            "width": 300,
+          }
+        }
+      />
+      <div
+        className="flex flex-col space-y-5 px-6 pt-4"
+      >
+        <div
+          className="font-bold text-xl mb-2"
+        >
+          MauroDT
+        </div>
+        <p
+          className="text-icon text-base overflow-hidden space-y-4"
+          style={
+            Object {
+              "width": 300,
+            }
+          }
+        />
+        0
+        0
+      </div>
+      <button
+        className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded-full my-5"
+        onClick={[Function]}
+      >
+        Remover
+      </button>
+    </div>
+    <div
+      className="flex flex-col space-y-7 self-center mt-10"
+    >
+      <MenuStats
+        stats={
+          Object {
+            "completed": 142,
+            "days_watched": 47.6,
+            "dropped": 21,
+            "episodes_watched": 2784,
+            "mean_score": 6.11,
+            "on_hold": 2,
+            "plan_to_watch": 14,
+            "rewatched": 0,
+            "total_entries": 181,
+            "watching": 2,
+          }
+        }
+      />
+      <MenuStats
+        stats={
+          Object {
+            "chapters_read": 4315,
+            "completed": 37,
+            "days_read": 28.6,
+            "dropped": 7,
+            "mean_score": 6.78,
+            "on_hold": 8,
+            "plan_to_read": 14,
+            "reading": 4,
+            "reread": 1,
+            "total_entries": 70,
+            "volumes_read": 464,
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="mt-10"
+  >
+    <ListCardManime
+      context="anime"
+      dispatchManime={[Function]}
+      manAnimes={
+        Array [
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/anime/4/5123.jpg?s=be2454544fb31044414aca031c5af1ed",
+            "mal_id": 2001,
+            "name": "Tengen Toppa Gurren Lagann",
+            "url": "https://myanimelist.net/anime/2001/Tengen_Toppa_Gurren_Lagann",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/anime/3/73178.jpg?s=80fcc4f3c1c109c4cb57426ce1370e84",
+            "mal_id": 22535,
+            "name": "Kiseijuu: Sei no Kakuritsu",
+            "url": "https://myanimelist.net/anime/22535/Kiseijuu__Sei_no_Kakuritsu",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/anime/5/12844.jpg?s=a17f80ba3bdc0e2bc634827a740700b0",
+            "mal_id": 2164,
+            "name": "Dennou Coil",
+            "url": "https://myanimelist.net/anime/2164/Dennou_Coil",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/anime/1295/106551.jpg?s=d80ac7dd1ba5b48d9ffb70b5c0723b4b",
+            "mal_id": 37999,
+            "name": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+            "url": "https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/anime/1122/96435.jpg?s=ddb8a71f5d9f36507239e583e49b4d92",
+            "mal_id": 28851,
+            "name": "Koe no Katachi",
+            "url": "https://myanimelist.net/anime/28851/Koe_no_Katachi",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/anime/3/72943.jpg?s=02a59f6ef79e706662dfc1e6f836f427",
+            "mal_id": 28171,
+            "name": "Shokugeki no Souma",
+            "url": "https://myanimelist.net/anime/28171/Shokugeki_no_Souma",
+          },
+        ]
+      }
+    />
+    <ListCardManime
+      context="manga"
+      dispatchManime={[Function]}
+      manAnimes={
+        Array [
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/manga/3/179882.jpg?s=5c77b0059bc82990bab39002790802d4",
+            "mal_id": 1706,
+            "name": "JoJo no Kimyou na Bouken Part 7: Steel Ball Run",
+            "url": "https://myanimelist.net/manga/1706/JoJo_no_Kimyou_na_Bouken_Part_7__Steel_Ball_Run",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/manga/1/157897.jpg?s=8fb0808c48666aed744e94a2e67408c5",
+            "mal_id": 2,
+            "name": "Berserk",
+            "url": "https://myanimelist.net/manga/2/Berserk",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/manga/1/145619.jpg?s=5e2e7b1c23db307af7ffc87ee5e5040b",
+            "mal_id": 768,
+            "name": "Gunnm",
+            "url": "https://myanimelist.net/manga/768/Gunnm",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/manga/2/188925.jpg?s=cb8f03b751e591f609e9fd630c7e1a10",
+            "mal_id": 642,
+            "name": "Vinland Saga",
+            "url": "https://myanimelist.net/manga/642/Vinland_Saga",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/manga/2/25993.jpg?s=e5baecc03f66c3a52c9f5acab26f6d95",
+            "mal_id": 7887,
+            "name": "Toriko",
+            "url": "https://myanimelist.net/manga/7887/Toriko",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/manga/3/164420.jpg?s=71939fc4cb2146cabceb8275de5ce72e",
+            "mal_id": 4632,
+            "name": "Oyasumi Punpun",
+            "url": "https://myanimelist.net/manga/4632/Oyasumi_Punpun",
+          },
+          Object {
+            "image_url": "https://cdn.myanimelist.net/images/manga/3/188896.jpg?s=283305c99ce73633aeb4e53a766ba38c",
+            "mal_id": 90125,
+            "name": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+            "url": "https://myanimelist.net/manga/90125/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen",
+          },
+        ]
+      }
+    />
+  </div>
+</Fragment>
+`;

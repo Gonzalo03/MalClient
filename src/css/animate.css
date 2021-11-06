@@ -1,0 +1,5 @@
+
+.progress {
+    transition: 1s ease;
+    transition-delay: 0.5s;
+  }

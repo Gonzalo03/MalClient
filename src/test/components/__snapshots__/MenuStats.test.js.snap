@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente MenuStats Debe hacer match con el snapshot 1`] = `
+<Fragment>
+  <p
+    className="text-center text-xl text-white"
+  >
+    <span
+      className="bg-primary p-2 rounded-xl"
+    >
+      Anime Stats
+    </span>
+  </p>
+  <div
+    className="flex flex-col space-y-3"
+  >
+    <CustomProgressBar
+      color="gray"
+      colorAcent={null}
+      percent={47.6}
+      text="Spend days"
+    />
+    <CustomProgressBar
+      color="green"
+      colorAcent={null}
+      percent={2}
+      text="Current"
+    />
+    <CustomProgressBar
+      color="blue"
+      colorAcent="700"
+      percent={142}
+      text="Completed"
+    />
+    <CustomProgressBar
+      color="yellow"
+      colorAcent={null}
+      percent={2}
+      text="On hold"
+    />
+    <CustomProgressBar
+      color="red"
+      colorAcent={null}
+      percent={21}
+      text="Dropped"
+    />
+    <CustomProgressBar
+      color="blue"
+      colorAcent={null}
+      percent={6.11}
+      text="Average"
+    />
+  </div>
+</Fragment>
+`;
