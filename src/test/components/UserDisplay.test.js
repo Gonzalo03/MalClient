@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import { UserDisplay } from '../../components/UserDisplay';
-import { userFix } from '../___fixtures___/userFix';
 import { useUser } from '../../hook/useUser';
+import { userFix } from '../___fixtures___/userFix';
 jest.mock( '../../hook/useUser');
 
 
@@ -26,10 +26,11 @@ describe('Pruebas en el componente userDisplay', ()=>{
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.find('MenuStats').length).toBe(2);
+        expect(wrapper.find('ListCardManime').length).toBe(2);
 
     });
 
-    test('Debe hacer click', () => {
+    test('Debe simular el clikc del borrado de usuario', () => {
    
         useUser.mockReturnValue({
             lading : false,

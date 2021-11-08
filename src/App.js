@@ -3,7 +3,6 @@ import { useInput } from "./hook/useInput";
 import { useSetUsers } from "./hook/useSetUsers";
 
 import "./index.css";
-
 const App = () => {
   
   const { users, addUser, deleteUser } = useSetUsers();

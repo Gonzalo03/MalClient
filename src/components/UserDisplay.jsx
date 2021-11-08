@@ -10,6 +10,8 @@ import { avgReducer } from "../reducer/avgReducer";
 import { CircleLoading } from "react-loadingg";
 import { MenuStats } from "./MenuStats";
 import { ListCardManime } from "./ListCardManime";
+import { computeColor } from "../helpers/computeColor";
+import { tags } from "../const/tags";
 
 export const UserDisplay = ({ tag, deleteUser }) => {
   const { loading, data, err } = useUser(tag);
@@ -26,11 +28,10 @@ export const UserDisplay = ({ tag, deleteUser }) => {
   const aboutRef = useRef();
 
   useEffect(() => {
-    loadingRef.current &&
-      loadingRef.current.scrollIntoView({ behavior: "smooth" });
+    loadingRef.current && loadingRef.current.scrollIntoView({ behavior: "smooth" });
 
     if (aboutRef.current && data) {
-      aboutRef.current.innerHTML = data.about || "";
+      aboutRef.current.innerHTML = data.about;
 
       setTimeout(() => {
         aboutRef && aboutRef.current.scrollIntoView({ behavior: "smooth" });
@@ -56,45 +57,13 @@ export const UserDisplay = ({ tag, deleteUser }) => {
                   style={{ width: 300 }}
                 ></p>
                 {computeAvgAnime &&<p
-                    className={`text-${
-                      computeAvgAnime > 7
-                        ? "green"
-                        : computeAvgAnime < 7 && computeAvgAnime > 4
-                        ? "yellow"
-                        : computeAvgAnime < 4
-                        ? "red"
-                        : ""
-                    }-500`}
-                  >
-                    Anime score : {computeAvgAnime} ={">"}{" "}
-                    {computeAvgAnime > 7
-                      ? "GOD"
-                      : computeAvgAnime < 7 && computeAvgAnime > 4
-                      ? "Neutral"
-                      : computeAvgAnime < 4
-                      ? "ZZZZZZ"
-                      : ""}
-                  </p>}
+                    className={`text-${computeColor(computeAvgAnime)}-500`}
+                  >Anime score : {computeAvgAnime} = {tags[computeColor(computeAvgAnime)]}</p>}
                 {computeAvgManga && (
                   <p
-                    className={`text-${
-                      computeAvgManga > 7
-                        ? "green"
-                        : computeAvgManga < 7 && computeAvgManga > 4
-                        ? "yellow"
-                        : computeAvgManga < 4
-                        ? "red"
-                        : ""
-                    }-500`}
+                    className={`text-${computeColor(computeAvgManga)}-500`}
                   >
-                    Manga score : {computeAvgManga} ={">"}{" "}
-                    {computeAvgManga > 7
-                      ? "GOD"
-                      : computeAvgManga < 7 && computeAvgManga > 4
-                      ? "Neutral"
-                      : computeAvgManga < 4
-                      ? "ZZZZZZ"
-                      : ""}
+                    Manga score : {computeAvgManga} = {tags[computeColor(computeAvgManga)]}
                   </p>
                 )}
               </div>

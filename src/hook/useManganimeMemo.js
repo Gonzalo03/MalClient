@@ -5,8 +5,8 @@ export const useManganimeMemo = (avgManganime) => {
 
       const animeMemo = useMemo(() => {
         const avg = avgManganime.reduce((a, b) => a + b, 0);
-        return avg / avgManganime.length;
+        return (avg / avgManganime.length).toString();
       }, [avgManganime]);
     
-    return animeMemo;
+    return animeMemo.substr(0, animeMemo.indexOf('.') + 2);
 }
