@@ -25,7 +25,7 @@ export const ManAnimeCard = ({ manAnime, context, dispatchManime }) => {
             </div>
             <p className="text-gray-700 text-base text-custom-second flex flex-col space-y-2">
               <span>
-                Status :{" "}
+                Status :
                 <span
                   className={`${
                     data.status.includes('Finished') ? 'text-blue-500' : data.status.includes('Hiatus') ? 'text-yellow-500' : 'text-green-500'}`}

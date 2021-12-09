@@ -1,15 +1,14 @@
 import { useRef, useEffect, useReducer } from "react";
 
-
 import { useUser } from "../hook/useUser";
 import { useManganimeMemo } from "../hook/useManganimeMemo";
 import { avgReducer } from "../reducer/avgReducer";
 
-
-
 import { CircleLoading } from "react-loadingg";
 import { MenuStats } from "./MenuStats";
 import { ListCardManime } from "./ListCardManime";
+
+
 import { computeColor } from "../helpers/computeColor";
 import { tags } from "../const/tags";
 
@@ -17,8 +16,8 @@ export const UserDisplay = ({ tag, deleteUser }) => {
   const { loading, data, err } = useUser(tag);
 
   const [avgManime, dispatchManime] = useReducer(avgReducer, {
-    anime : [],
-    manga : []
+    anime: [],
+    manga: [],
   });
 
   const computeAvgAnime = useManganimeMemo(avgManime.anime) || 0;
@@ -28,7 +27,8 @@ export const UserDisplay = ({ tag, deleteUser }) => {
   const aboutRef = useRef();
 
   useEffect(() => {
-    loadingRef.current && loadingRef.current.scrollIntoView({ behavior: "smooth" });
+    loadingRef.current &&
+      loadingRef.current.scrollIntoView({ behavior: "smooth" });
 
     if (aboutRef.current && data) {
       aboutRef.current.innerHTML = data.about;
@@ -39,11 +39,9 @@ export const UserDisplay = ({ tag, deleteUser }) => {
     }
   }, [tag, data]);
 
-
-
   return (
     <>
-      {!loading && !err ? (
+      {!loading ? (
         <>
           <div className="md:grid grid-cols-2 my-5 userDisplay">
             {/* Profile Preview */}
@@ -56,14 +54,16 @@ export const UserDisplay = ({ tag, deleteUser }) => {
                   ref={aboutRef}
                   style={{ width: 300 }}
                 ></p>
-                {computeAvgAnime &&<p
-                    className={`text-${computeColor(computeAvgAnime)}-500`}
-                  >Anime score : {computeAvgAnime} = {tags[computeColor(computeAvgAnime)]}</p>}
+                {computeAvgAnime && (
+                  <p className={`text-${computeColor(computeAvgAnime)}-500`}>
+                    Anime score : {computeAvgAnime} ={" "}
+                    {tags[computeColor(computeAvgAnime)]}
+                  </p>
+                )}
                 {computeAvgManga && (
-                  <p
-                    className={`text-${computeColor(computeAvgManga)}-500`}
-                  >
-                    Manga score : {computeAvgManga} = {tags[computeColor(computeAvgManga)]}
+                  <p className={`text-${computeColor(computeAvgManga)}-500`}>
+                    Manga score : {computeAvgManga} ={" "}
+                    {tags[computeColor(computeAvgManga)]}
                   </p>
                 )}
               </div>

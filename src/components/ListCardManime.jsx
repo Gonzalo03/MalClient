@@ -11,7 +11,7 @@ export const ListCardManime = ({ manAnimes, context, dispatchManime }) => {
       <ul className="flex flex-wrap justify-center space-y-6 my-8">
         {manAnimes.map(
           (manAnime, index) =>
-            index <= 2 && (
+            index <= 1 && (
               <ManAnimeCard
                 manAnime={manAnime}
                 key={manAnime.mal_id}

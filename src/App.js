@@ -26,7 +26,7 @@ const App = () => {
           <h1 className="text-6xl font-yal">Mal Match</h1>
 
           <p className="text-3xl mt-5 font-sch">
-            Demuestra quien es GOD y quien es ZzzzzZ
+            Mal Client User
           </p>
         </div>
 
