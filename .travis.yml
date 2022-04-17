@@ -6,3 +6,5 @@ before_install:
 
 script: 
   - docker run -e CI=true goxx/malclient-goxx npm run test
+
+  
